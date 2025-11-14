@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zjr8k#$!d#^=f^*p+sg0b1jct+0xu)5w-8mg%mv!#m*^znuz&a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'SkillService.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql', #postgresql mysql',
         'NAME': os.getenv("DB_NAME"),
         'USER': os.getenv("DB_USER"),       
         'PASSWORD': os.getenv("DB_PASSWORD"),     
